@@ -1,0 +1,15 @@
+import random
+
+import cassiopeia as cass
+your_key = "null" #please entrer your Api key
+your_region = "EUNE" # your account region
+your_name = "null" # your ID in game
+cass.set_riot_api_key(your_key)  
+cass.set_default_region(your_region)
+summoner = cass.get_summoner(name=your_name)
+print("{name} is a level {level} summoner on the {region} 
+server.".format(name=summoner.name,
+level=summoner.level,
+region=summoner.region))
+
+#This can print your basic account data in LOL
